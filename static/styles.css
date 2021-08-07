@@ -10,6 +10,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
     background-color: var(--gray);
 }
 
@@ -60,6 +61,16 @@ header{
     outline: none;
 }
 
+.menu ul .menu_li--right select {
+    margin-right: 10px;
+    width: 100px;
+    height: 24.5px;
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
 .menu ul li .li_input--date{
     width: 100px;
     height: 15px;
@@ -68,7 +79,7 @@ header{
 /* MENÚ LATERAL */
 .container-menu2{
     position: absolute;
-    width: 4%;
+    width: 5%;
     height: 100vh;
     top: 0;
     left: 0;
@@ -90,15 +101,16 @@ header{
 .content .pulpo{
     width: 20px;
     height: 20px;
-    padding: 16px;
+    padding: 22px;
 }
 
 .content .logout_btn{
     display: block;
     text-decoration: none;
-    padding: 12px;
+    padding: 15px;
     color: white;
-    margin-top: 240px;
+    margin-top: 210px;
+    margin-left: 10px;
     border-left: 5px solid transparent;
 }
 
@@ -161,11 +173,11 @@ header{
 }
 
 .sec1_grafica .porcientos{
-    margin-left: 80px;
+    margin-left: 60px;
 }
 
 .sec1_grafica .flecha{
-    margin-left: 25px;
+    margin-left: 45px;
 }
 
 .sec1_grafica .flecha p{
@@ -176,7 +188,7 @@ header{
 
 .graf-barras{
     width: 30%;
-    margin-left: 25px;
+    margin-left: 40px;
 }
 
 /* SEGUNDAS 2 GRÁFICAS */
@@ -197,7 +209,9 @@ header{
 }
 
 .sec2_grafica .cont-graf_sec2{
-    width: 65%;
+    width: 64%;
+    margin-left: 50px;
+    margin-top: -5px;
 }
 
 /* TERCERAS 2 GRÁFICAS */
@@ -239,7 +253,8 @@ header{
 
 /* SECCIÓN VERTICAL */
 .vertical{
-    width: 30%;
+    width: 35%;
+    /* margin-left: -10px; */
     margin-top: -570px;
     height: 602px;
     float: right;
@@ -265,7 +280,8 @@ header{
 }
 
 .grafica_vertical .cont-graf{
-    width: 65%;
+    width: 53%;
+    margin-left: 85px;
 }
 
 /* .grafica_vertical .cont-graf canvas {
@@ -274,7 +290,7 @@ header{
 
 .sec3_grafica{
     width: 80%;
-    height: 85px;
+    height: 103px;
     margin: 0 auto;
     padding: 5px;
     font-size: 1.2rem;
@@ -285,7 +301,6 @@ header{
 .sec3_grafica h3{
     display: flex;
     justify-content: center;
-    margin-top: -0.5px;
 }
 
 .sec3_grafica .tiempo {

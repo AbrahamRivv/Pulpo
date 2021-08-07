@@ -5,6 +5,9 @@
     <meta name="description" content="Este meta sirve para hacer SEO, lo que va aquí da más info en el navegador">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/styles.css">
     <title>FASE PULPO</title>
 </head>
@@ -13,8 +16,24 @@
         <nav class="menu">
             <ul>
                 <li class="menu_li--left"><img src="static/Saved Pictures/Grupo 66.png" alt=""></li>
-                <li class="menu_li--right"><input type="text" placeholder="clase"></li>
-                <li class="menu_li--right"><input type="text" placeholder="localidad"></li>
+                <!-- <li class="menu_li--right"><input type="text" placeholder="clase"></li>
+                <li class="menu_li--right"><input type="text" placeholder="localidad"></li> -->
+                <li class="menu_li--right"><select name="OS">
+                    <option value="1">Windows Vista</option> 
+                    <option value="2">Windows 7</option> 
+                    <option value="3">Windows XP</option>
+                    <option value="10">Fedora</option> 
+                    <option value="11">Debian</option> 
+                    <option value="12">Suse</option> 
+                 </select></li>
+                <li class="menu_li--right"><select name="OS">
+                    <option value="1">Windows Vista</option> 
+                    <option value="2">Windows 7</option> 
+                    <option value="3">Windows XP</option>
+                    <option value="10">Fedora</option> 
+                    <option value="11">Debian</option> 
+                    <option value="12">Suse</option> 
+                 </select></li>
                 <li class="menu_li--right"><input class="li_input--date" type="date"></li>
             </ul>
         </nav>
