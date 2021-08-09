@@ -21,6 +21,7 @@ html{
 
 /* MENÚ */
 header{
+    margin-bottom: 80px;
     height: 55px;
 }
 
@@ -130,21 +131,70 @@ header{
 
 /* PRIMERAS 2 GRÁFICAS */
 .horizontal{
-    margin-left: 54px;
-    width: 66%;
-    /* height: 150px; */
+    width: 70%;
+    height: 420px;
+    margin: 0 auto;
+    border-radius: 20px;
     font-size: 1.3rem;
-    /* background-color: #590ad863; */
+    background-color: var(--black);
+
+}
+
+.horizontal h2 {
+    font-size: 2.6rem;
+    padding: 30px;
 }
 
 .horizontal .horizontal_graficas--1{
-    display: flex;
-    
+    /* display: flex; */
+    margin-top: -30px;
 }
 
 .horizontal_graficas--1{
-    display: flex;
     padding: 10px;
     align-items: center;
     justify-content: center;
+}
+
+.browser{
+    display: flex;
+    float: right;
+    margin-top: -15px;
+}
+
+.browser input{
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.589);
+}
+.browser button{
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.trucks{
+    margin-top: 30px;
+}
+
+.truck_number{
+    display: flex;
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    background-color: black;
+}
+
+.truck_number img{
+    height: 30px;
+    margin-top: 11px;
+    margin-left: 10px;
+}
+
+.truck_number h4{
+    margin-left: 15px;
 }
