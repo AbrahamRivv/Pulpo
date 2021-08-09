@@ -1,0 +1,150 @@
+:root{
+    --inputs-laterales:  linear-gradient(#D76369, #F4AA74);
+    --red: #D76369;
+    --orange: #F6AA6F;
+    --black: #2F2F2F;
+    --gray: #888888;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--gray);
+}
+
+html{
+    font-size: 62.5%;
+    color: white;
+}
+
+/* MENÚ */
+header{
+    height: 55px;
+}
+
+.menu{
+    width: 100%;
+    float: left;
+}
+
+/* .menu ul {
+    margin-left: 10px;
+} */
+
+.menu ul .menu_li--left{
+    list-style: none;
+}
+
+.menu ul .menu_li--left img{
+    /* width: 30px; */
+    height: 30px;
+    margin-left: 80px;
+    float: left;
+}
+
+.menu ul .menu_li--right{
+    float: right;
+    list-style: none;
+    text-align: left;
+    padding: 5px;
+}
+
+.menu ul .menu_li--right input {
+    margin-right: 10px;
+    /* margin-left: 10px; */
+    width: 100px;
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.menu ul .menu_li--right select {
+    margin-right: 10px;
+    width: 100px;
+    height: 24.5px;
+    padding: 5px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.menu ul li .li_input--date{
+    width: 100px;
+    height: 15px;
+}
+
+/* MENÚ LATERAL */
+.container-menu2{
+    position: absolute;
+    width: 5%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+.content{
+    width: 100%;
+    max-width: 100px;
+    background: var(--black);
+    height: 100vh;
+    position: relative;
+}
+
+.content nav {
+    margin-top: 170px;
+    transform: translateY(15%);
+}
+
+.content .pulpo{
+    width: 20px;
+    height: 20px;
+    padding: 22px;
+}
+
+.content .logout_btn{
+    display: block;
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+    margin-top: 210px;
+    margin-left: 10px;
+    border-left: 5px solid transparent;
+}
+
+.content nav a {
+    display: block;
+    margin-bottom: 9px;
+    text-decoration: none;
+    padding: 6px;
+    color: white;
+    border-left: 5px solid transparent;
+}
+
+.content nav a:hover{
+    border-left: 5px solid white;
+    background: #1f1f1f;
+}
+
+/* PRIMERAS 2 GRÁFICAS */
+.horizontal{
+    margin-left: 54px;
+    width: 66%;
+    /* height: 150px; */
+    font-size: 1.3rem;
+    /* background-color: #590ad863; */
+}
+
+.horizontal .horizontal_graficas--1{
+    display: flex;
+    
+}
+
+.horizontal_graficas--1{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
