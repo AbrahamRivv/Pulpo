@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="static/lastTemplate.css">
     <title>FASE PULPO</title>
 </head>
 <body>
@@ -20,6 +20,7 @@
         </nav>
     </header>
     <main>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
         <section>
             <div class="container-menu2">
                 <div class="content">
@@ -32,11 +33,133 @@
                     <a href="#" class="logout_btn"><img src="static/Saved Pictures/enter.png" alt=""></a>
                 </div>
             </div>
+            <!-- <section class="hor_2">
+                <div>
+                    <h3>BITACORA</h3>
+                    <img src="static/Saved Pictures/Trazado 9.png" alt="">
+                    
+                    <h4>Fecha</h4> <p>21/sep/2021</p>
+                    <h4>Encontrado</h4> <p>T680</p>
+                    <h4>Tiempo</h4> <p>2 minutos</p>
+                </div>
+            </section> -->
+            <section class="title">
+                <div class="title_car">
+                    <h2>VEHÍCULO 1</h2>
+                </div>
+            </section>
             <section class="horizontal">
                 <section class="horizontal_graficas--1">
-                    
+                    <div class="cont_hor-1">
+                        <div class="imgs_gp62">
+                            <img class="src1" src="static/Saved Pictures/Grupo 62.png" alt="">
+                            <img class="src2" src="static/Saved Pictures/Grupo 62.png" alt="">
+                            <img class="src3" src="static/Saved Pictures/Grupo 62.png" alt="">
+                            <img class="src4" src="static/Saved Pictures/Grupo 62.png" alt="">
+                            <img class="src5" src="static/Saved Pictures/Grupo 62.png" alt="">
+                        </div>
+                        <div class="cont_text">
+                            <div class="title-cont_text">
+                                <h3>SERIAL DEL VEHÍCULO</h3>
+                                <button>GENERAL</button>
+                            </div>
+                            <div class="contenido">
+                                <h4 class="num">Num Económico</h4> 
+                                <h4 class="model">Modelo</h4> 
+                                <h4 class="marca">Marca</h4> 
+                                <h4 class="km">KM</h4>
+                            </div>
+                            <div class="content_results">
+                                <p>2456</p>
+                                <p>2456</p>
+                                <p>2456</p>
+                                <p>2456</p>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </section>
+
+            <section class="hor_2">
+                <section class="hor_2-content">
+                    <h3>BITACORA</h3>
+                    <div class="cont_hor-2">
+                        <img src="static/Saved Pictures/Trazado 9.png" alt="">
+                    </div>
+                    <div class="contenido2">
+                        <h4>Fecha</h4>
+                        <h4>Encontrado</h4>
+                        <h4>Tiempo</h4>
+                    </div>
+                    <div class="results-contenido2">
+                        <p>21/sep/2021</p>
+                        <p>T680</p>
+                        <p>2 minutos</p>
+                    </div>
+                </section>
+            </section>
+
+            <section class="hor_3">
+                <section class="hor_3-content">
+                    <div class="title-hor_3">
+                        <h3>DASHBOARD DEL VEHÍCULO</h3>
+                        <button>PULPO DB</button>
+                    </div>
+                    <div class="icon-pulpo">
+                        <img src="static/Saved Pictures/Trazado 9.png" alt="">
+                        <p>30 días</p>
+                    </div>
+                    <div class="time-run">
+                        <img src="static/Saved Pictures/fast-time.png" alt="">
+                        <h3>Tiempo promedio</h3>
+                        <p>2.5 minutos</p>
+                    </div>
+                    <div class="grafica">
+                        <div class="sec_grafica">
+                            <div class="cont-graf_sec">
+                                <canvas id="Chart1" width="400" height="400"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <script>
+                var ctx = document.getElementById('Chart1').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                        datasets: [{
+                            label: '# of Votes',
+                            data: [12, 19, 3, 5, 2, 3],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 159, 64, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255, 99, 132, 1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)',
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 159, 64, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            </script>
         </section>
     </main>
 </body>
