@@ -19,21 +19,32 @@
                 <!-- <li class="menu_li--right"><input type="text" placeholder="clase"></li>
                 <li class="menu_li--right"><input type="text" placeholder="localidad"></li> -->
                 <li class="menu_li--right"><select name="OS">
-                    <option value="1">Windows Vista</option> 
+                    <option value="1">hola</option> 
                     <option value="2">Windows 7</option> 
                     <option value="3">Windows XP</option>
                     <option value="10">Fedora</option> 
                     <option value="11">Debian</option> 
                     <option value="12">Suse</option> 
                  </select></li>
-                <li class="menu_li--right"><select name="OS">
-                    <option value="1">Windows Vista</option> 
-                    <option value="2">Windows 7</option> 
-                    <option value="3">Windows XP</option>
-                    <option value="10">Fedora</option> 
-                    <option value="11">Debian</option> 
-                    <option value="12">Suse</option> 
-                 </select></li>
+                 
+                <li class="menu_li--right">
+                    <form>
+                        <div class="multiselect">
+                            <div class="selectBox" onclick="showCheckboxes()">
+                                <select name="OS">
+                                    <option value="1">selecciona una</option> 
+                                </select>
+                                 <div class="overSelect"></div>
+                            </div>
+                            <div id="checkboxes">
+                                <label for="one"><input type="checkbox">Hola</label>
+                                <label for="two"><input type="checkbox">Hola2</label>
+                                <label for="three"><input type="checkbox">Hola3</label>
+                            </div>
+                        </div>
+                    </form>
+                </li>
+
                 <li class="menu_li--right"><input class="li_input--date" type="date"></li>
                 <div class="menu_button">
                     <button class="menu_li--right" type="submit">Buscar</button>
@@ -152,6 +163,17 @@
         </section>
 
         <script>
+            var expanded = false;
+            function showCheckboxes(){
+                var checkboxes = document.getElementById("checkboxes");
+                if (!expanded) {
+                    checkboxes.style.display = "block";
+                    expanded = true;
+                } else {
+                    checkboxes.style.display = "none";
+                    expanded = false;
+                }
+            }
 
             window.onload = function dias_sin_inflado(){
                 var rango_0 = 5;
@@ -255,8 +277,9 @@
                                 font: {
                                     family: "Montserrat",
                                     size: 16,
-                                    lineHeight: 0
-                                }
+                                    lineHeight: 0,
+                                },
+                                color: 'white',
                             }
                         },
                         scales: {
@@ -292,7 +315,28 @@
                                 'rgba(246, 170, 111, 1)'
                             ],
                             borderWidth: 1
-                        }]
+                        },
+                        {
+                            label: '# of Votes',
+                            data: [12, 19, 3, 20, 20, 3],
+                            backgroundColor: [
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)'
+                            ],
+                            borderColor: [
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)'
+                            ],
+                            borderWidth: 1
+                        },]
                     },
                     options: {
                         plugins: {
@@ -303,7 +347,8 @@
                                     family: "Montserrat",
                                     size: 15,
                                     lineHeight: 0
-                                }
+                                },
+                                color: 'white',
                             }
                         },
                         scales: {
@@ -311,7 +356,7 @@
                                 beginAtZero: true
                             }
                         }
-                    }
+                    },
                 });
 
                 var ctx = document.getElementById('myChart3').getContext('2d');
@@ -339,7 +384,7 @@
                                 'rgba(246, 170, 111, 1)'
                             ],
                             borderWidth: 1
-                        }]
+                        },]
                     },
                     options: {
                         plugins: {
@@ -353,7 +398,8 @@
                                     family: "Montserrat",
                                     size: 13,
                                     lineHeight: 0
-                                }
+                                },
+                                color: 'white',
                             }
                         },
                         scales: {
@@ -403,7 +449,8 @@
                                     family: "Montserrat",
                                     size: 15,
                                     lineHeight: 0
-                                }
+                                },
+                                color: 'white',
                             }
                         },
                         scales: {

@@ -94,6 +94,42 @@ header{
     margin-top: 4px;
 }
 
+/* CHECKBOX */
+.multiselect{
+    width: 100px;
+    position: relative;
+}
+
+.selectBox{
+    position: relative;
+}
+
+.selectBox select{
+    width: 100%;
+}
+
+.overSelect{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#checkboxes{
+    display: none;
+    width: 150px;
+    border: 1px #dadada solid;
+}
+
+#checkboxes label{
+    display: block;
+    margin-left: -40px;
+}
+
+#checkboxes label:hover{
+    background-color: #1c90ff;
+}
 
 /* MENÚ LATERAL */
 .container-menu2{
