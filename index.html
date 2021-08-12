@@ -35,6 +35,9 @@
                     <option value="12">Suse</option> 
                  </select></li>
                 <li class="menu_li--right"><input class="li_input--date" type="date"></li>
+                <div class="menu_button">
+                    <button class="menu_li--right" type="submit">Buscar</button>
+                </div>
             </ul>
         </nav>
     </header>
@@ -149,221 +152,268 @@
         </section>
 
         <script>
-            var ctx = document.getElementById('bar1').getContext('2d');
-            var myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
 
-            var ctx = document.getElementById('bar2').getContext('2d');
-            var myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
+            window.onload = function dias_sin_inflado(){
+                var rango_0 = 5;
+                var rango_30 = 3;
+                var rango_60 = 2;
 
-            var ctx = document.getElementById('myChart').getContext('2d');
-            var myChart = new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
 
-            var ctx = document.getElementById('myChart2').getContext('2d');
-            var myChart = new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
+                
 
-            var ctx = document.getElementById('myChart3').getContext('2d');
-            var myChart = new Chart(ctx, {
-                type: 'radar',
-                data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
-                        }
-                    }
-                }
-            });
 
-            var ctx = document.getElementById('myChart4').getContext('2d');
-            var myChart = new Chart(ctx, {
-                type: 'radar',
-                data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true
+                var ctx = document.getElementById('bar1').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['', '', ''],
+                        datasets: [{
+                            data: [5, 2, 3],
+                            backgroundColor: [
+                                'rgba(23, 23, 23, 1)',
+                                'rgba(23, 23, 23, 1)',
+                                'rgba(23, 23, 23, 1)'
+                            ],
+                            borderColor: [
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                            ],
+                            borderWidth: 2.5
+                        }]
+                    },
+                    options: {
+                        plugins:{
+                            legend: {
+                                display: false
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
                         }
                     }
-                }
-            });
+                });
+
+                var ctx = document.getElementById('bar2').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['', '', ''],
+                        datasets: [{
+                            fill: false,
+                            data: [5, 2, 3],
+                            backgroundColor: [
+                                'rgba(23, 23, 23, 1)',
+                                'rgba(23, 23, 23, 1)',
+                                'rgba(23, 23, 23, 1)'
+                            ],
+                            borderColor: [
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                            ],
+                            borderWidth: 2.5
+                        }]
+                    },
+                    options: {
+                        plugins:{
+                            legend: {
+                                display: false
+                            }
+                        }
+                    }
+                });
+
+                var ctx = document.getElementById('myChart').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['0-30 días', '31-60 días', '60+'],
+                        datasets: [{
+                            label: '# of Votes',
+                            data: [rango_0, rango_30, rango_60],
+                            backgroundColor: [
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(255, 99, 132, 0.2)',
+                            ],
+                            borderColor: [
+                                'rgba(153, 102, 255, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(255, 99, 132, 1)',
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Periodos de inflado',
+                                font: {
+                                    family: "Montserrat",
+                                    size: 16,
+                                    lineHeight: 0
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+
+                var ctx = document.getElementById('myChart2').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: [1, 2, 3, 4, 5, 6],
+                        datasets: [{
+                            label: '# of Votes',
+                            data: [12, 19, 3, 5, 2, 3],
+                            backgroundColor: [
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)'
+                            ],
+                            borderColor: [
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Cantidad de vehículos Vs Inflados',
+                                font: {
+                                    family: "Montserrat",
+                                    size: 15,
+                                    lineHeight: 0
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+
+                var ctx = document.getElementById('myChart3').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                        datasets: [{
+                            label: '# of Votes',
+                            data: [12, 19, 3, 5, 2, 3],
+                            backgroundColor: [
+                                'rgba(246, 170, 111, 0.2)',
+                                'rgba(246, 170, 111, 0.2)',
+                                'rgba(246, 170, 111, 0.2)',
+                                'rgba(246, 170, 111, 0.2)',
+                                'rgba(246, 170, 111, 0.2)',
+                                'rgba(246, 170, 111, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            title: {
+                                display: true,
+                                text: 'Porcentaje de clase de vehículos inflados',
+                                font: {
+                                    family: "Montserrat",
+                                    size: 13,
+                                    lineHeight: 0
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+
+                var ctx = document.getElementById('myChart4').getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'radar',
+                    data: {
+                        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                        datasets: [{
+                            label: '# of Votes',
+                            data: [12, 19, 3, 5, 2, 3],
+                            backgroundColor: [
+                                'rgba(246, 170, 111, 0.2)',
+                                'rgba(246, 170, 111, 0.2)',
+                                'rgba(246, 170, 111, 0.2)',
+                                'rgba(246, 170, 111, 0.2)',
+                                'rgba(246, 170, 111, 0.2)',
+                                'rgba(246, 170, 111, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)',
+                                'rgba(246, 170, 111, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            title: {
+                                display: true,
+                                text: 'Porcentaje de inflados por localidad',
+                                font: {
+                                    family: "Montserrat",
+                                    size: 15,
+                                    lineHeight: 0
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        }
+                    }
+                });
+            }
             </script>
     </main>
 </body>
