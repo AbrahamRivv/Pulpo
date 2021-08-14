@@ -118,7 +118,7 @@ header{
 
 #checkboxes{
     display: none;
-    width: 150px;
+    width: 105px;
     border: 1px #dadada solid;
 }
 
@@ -128,6 +128,42 @@ header{
 }
 
 #checkboxes label:hover{
+    background-color: #1c90ff;
+}
+
+.multiselect2{
+    width: 150px;
+    position: relative;
+}
+
+.selectBox2{
+    position: relative;
+}
+
+.selectBox2 select{
+    width: 100%;
+}
+
+.overSelect2{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#checkboxes2{
+    display: none;
+    width: 105px;
+    border: 1px #dadada solid;
+}
+
+#checkboxes2 label{
+    display: block;
+    margin-left: -40px;
+}
+
+#checkboxes2 label:hover{
     background-color: #1c90ff;
 }
 
@@ -154,9 +190,9 @@ header{
 }
 
 .content .pulpo{
-    width: 20px;
-    height: 20px;
-    padding: 22px;
+    width: 40px;
+    height: 35px;
+    padding: 13px;
 }
 
 .content .logout_btn{

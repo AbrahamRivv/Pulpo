@@ -163,19 +163,30 @@ header{
 }
 
 .browser input{
+    height: 30px;
     padding: 5px;
     outline: none;
     border: none;
     border-radius: 8px;
+    color: white;
     background-color: rgba(0, 0, 0, 0.589);
 }
-.browser button{
+/* .browser button{
     padding: 5px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
+} */
 
+.menu_button .menu_li--right{
+    height: 30px;
+    background-color: #F6AA6F;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    letter-spacing: 0.5px;
+}
 /* .trucks{
     margin-top: 30px;
 } */

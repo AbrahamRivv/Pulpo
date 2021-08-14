@@ -18,21 +18,30 @@
                 <li class="menu_li--left"><img src="static/Saved Pictures/Grupo 66.png" alt=""></li>
                 <!-- <li class="menu_li--right"><input type="text" placeholder="clase"></li>
                 <li class="menu_li--right"><input type="text" placeholder="localidad"></li> -->
-                <li class="menu_li--right"><select name="OS">
-                    <option value="1">hola</option> 
-                    <option value="2">Windows 7</option> 
-                    <option value="3">Windows XP</option>
-                    <option value="10">Fedora</option> 
-                    <option value="11">Debian</option> 
-                    <option value="12">Suse</option> 
-                 </select></li>
+                <li class="menu_li--right">
+                    <form>
+                        <div class="multiselect2">
+                            <div class="selectBox2" onclick="showCheckboxes2()">
+                                <select name="OS">
+                                    <option value="1">selecciona1</option> 
+                                </select>
+                                <div class="overSelect2"></div>
+                            </div>
+                            <div id="checkboxes2">
+                                <label for="one"><input type="checkbox">Hola</label>
+                                <label for="two"><input type="checkbox">Hola2</label>
+                                <label for="three"><input type="checkbox">Hola3</label>
+                            </div>
+                        </div>
+                    </form>
+                </li>
                  
                 <li class="menu_li--right">
                     <form>
                         <div class="multiselect">
                             <div class="selectBox" onclick="showCheckboxes()">
                                 <select name="OS">
-                                    <option value="1">selecciona una</option> 
+                                    <option value="1">selecciona2</option> 
                                 </select>
                                  <div class="overSelect"></div>
                             </div>
@@ -166,6 +175,18 @@
             var expanded = false;
             function showCheckboxes(){
                 var checkboxes = document.getElementById("checkboxes");
+                if (!expanded) {
+                    checkboxes.style.display = "block";
+                    expanded = true;
+                } else {
+                    checkboxes.style.display = "none";
+                    expanded = false;
+                }
+            }
+
+            // var expanded = false;
+            function showCheckboxes2(){
+                var checkboxes = document.getElementById("checkboxes2");
                 if (!expanded) {
                     checkboxes.style.display = "block";
                     expanded = true;
