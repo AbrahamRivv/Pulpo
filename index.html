@@ -80,13 +80,15 @@
                     <div class="sec1_grafica">
                         <h3>Vehículos inflados</h3>
                         <div class="cont-horizontal">
+                            <div class="graf-barras-1">
+                                <div class="cont_graf-barras-1">
+                                    <canvas id="gauge" width="400" height="400"></canvas>
+                                    <canvas id="gaugemeter" style="position: absolute; z-index: 1;"></canvas>
+                                </div>
+                            </div>
                             <div class="porcientos">
                                 <p class="divis">19/21</p>
                                 <p class="percent">90%</p>
-                            </div>
-                            <div class="flecha">
-                                <img src="static/Saved Pictures/Trazado 10.png" alt="">
-                                <p>50%</p>
                             </div>
                             <div class="graf-barras">
                                 <div class="cont_graf-barras">
@@ -101,10 +103,6 @@
                             <div class="porcientos">
                                 <p class="divis">19/21</p>
                                 <p class="percent">90%</p>
-                            </div>
-                            <div class="flecha">
-                                <img src="static/Saved Pictures/Trazado 10.png" alt="">
-                                <p>50%</p>
                             </div>
                             <div class="graf-barras">
                                 <div class="cont_graf-barras">
@@ -201,9 +199,50 @@
                 var rango_30 = 3;
                 var rango_60 = 2;
 
+                // score gauge
+                function drawGauge(normalValue, normalValue, dangerValue, currentValue, chartContainer, gaugemeterContainer){
+                    var chartcanvas = document.getElementById(chartContainer);
+                    var chartwrapper = chartcanvas.parentNode;
+                    chartcanvas.setAttribute('width'.window.getComputedStyle(chartwrapper).width);
+                    chartcanvas.setAttribute('height'.window.getComputedStyle(chartwrapper).height);
+                    var ctxchart = chartcanvas.getContext('2d')
+                    var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        datasets: [{
+                            data: [normalValue, normalValue, dangerValue],
+                            backgroundColor: [
+                                'green',
+                                'yellow',
+                                'red'
+                            ],
+                            borderColor: [
+                                'green',
+                                'yellow',
+                                'red',
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        legend: {
+                            display: false
+                        },
+                        circumference: Math.PI
+                    }
+                });
 
+                ctxchart.translate(3 * chartcanvas.width / 8, 3 * chartcanvas.height/ 8);
+                ctxchart.rotate(3 * Math.PI / 2);
+                ctxchart.translate(-3 * chartcanvas.width / 8, -3 * chartcanvas.height / 8);
+                // var image = new Image();
+                // image.src = 'gaugemeter.png';
+                // image.onerror = function(){alert(image.src + 'failed')};
+                // image.onload = draw;
+                // var rotation = 1;
+                };
                 
-
+                // drawGauge(600, 300, 100, 475, 'gauge', 'gaugemeter')
 
                 var ctx = document.getElementById('bar1').getContext('2d');
                 var myChart = new Chart(ctx, {
@@ -238,6 +277,7 @@
                         }
                     }
                 });
+
 
                 var ctx = document.getElementById('bar2').getContext('2d');
                 var myChart = new Chart(ctx, {
@@ -303,11 +343,11 @@
                                 color: 'white',
                             }
                         },
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
+                        // scales: {
+                        //     y: {
+                        //         beginAtZero: true
+                        //     }
+                        // }
                     }
                 });
 
@@ -423,11 +463,11 @@
                                 color: 'white',
                             }
                         },
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
+                        // scales: {
+                        //     y: {
+                        //         beginAtZero: true
+                        //     }
+                        // }
                     }
                 });
 
@@ -474,11 +514,11 @@
                                 color: 'white',
                             }
                         },
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
+                        // scales: {
+                        //     y: {
+                        //         beginAtZero: true
+                        //     }
+                        // }
                     }
                 });
             }

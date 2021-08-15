@@ -265,7 +265,7 @@ header{
 }
 
 .sec1_grafica .porcientos{
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 .sec1_grafica .flecha{
@@ -280,7 +280,11 @@ header{
 
 .graf-barras{
     width: 30%;
-    margin-left: 40px;
+    margin-left: 80px;
+}
+
+.graf-barras-1{
+    width: 30%;
 }
 
 /* SEGUNDAS 2 GRÁFICAS */
