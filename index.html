@@ -63,6 +63,7 @@
     </header>
     <main>
         <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
+        <script src="dist/gauge.js"></script>
         <section>
             <div class="container-menu2">
                 <div class="content">
@@ -82,8 +83,8 @@
                         <div class="cont-horizontal">
                             <div class="graf-barras-1">
                                 <div class="cont_graf-barras-1">
-                                    <canvas id="gauge" width="400" height="400"></canvas>
-                                    <canvas id="gaugemeter" style="position: absolute; z-index: 1;"></canvas>
+                                    <canvas id="demo"></canvas>
+                                    <div id="preview-textfield"></div>
                                 </div>
                             </div>
                             <div class="porcientos">
@@ -100,6 +101,12 @@
                     <div class="sec1_grafica">
                         <h3>Entradas correctas</h3>
                         <div class="cont-horizontal">
+                            <div class="graf-barras-1">
+                                <div class="cont_graf-barras-1">
+                                    <canvas id="demo2"></canvas>
+                                    <div id="preview-textfield2"></div>
+                                </div>
+                            </div>
                             <div class="porcientos">
                                 <p class="divis">19/21</p>
                                 <p class="percent">90%</p>
@@ -200,49 +207,99 @@
                 var rango_60 = 2;
 
                 // score gauge
-                function drawGauge(normalValue, normalValue, dangerValue, currentValue, chartContainer, gaugemeterContainer){
-                    var chartcanvas = document.getElementById(chartContainer);
-                    var chartwrapper = chartcanvas.parentNode;
-                    chartcanvas.setAttribute('width'.window.getComputedStyle(chartwrapper).width);
-                    chartcanvas.setAttribute('height'.window.getComputedStyle(chartwrapper).height);
-                    var ctxchart = chartcanvas.getContext('2d')
-                    var myChart = new Chart(ctx, {
-                    type: 'doughnut',
-                    data: {
-                        datasets: [{
-                            data: [normalValue, normalValue, dangerValue],
-                            backgroundColor: [
-                                'green',
-                                'yellow',
-                                'red'
-                            ],
-                            borderColor: [
-                                'green',
-                                'yellow',
-                                'red',
-                            ],
-                            borderWidth: 1
-                        }]
+                var opts = {
+                    angle: -0.2, // The span of the gauge arc
+                    lineWidth: 0.2, // The line thickness
+                    radiusScale: 1, // Relative radius
+                    pointer: {
+                        length: 0.6, // // Relative to gauge radius
+                        strokeWidth: 0.035, // The thickness
+                        color: '#000000' // Fill color
                     },
-                    options: {
-                        legend: {
-                            display: false
+                    limitMax: false,     // If false, max value increases automatically if value > maxValue
+                    limitMin: false,     // If true, the min value of the gauge will be fixed
+                    colorStart: '#6FADCF',   // Colors
+                    colorStop: '#8FC0DA',    // just experiment with them
+                    strokeColor: '#E0E0E0',  // to see which ones work best for you
+                    generateGradient: true,
+                    highDpiSupport: true,     // High resolution support
+                    // color configs
+                    colorStart: "#6fadcf",
+                        colorStop: void 0,
+                        gradientType: 0,
+                        strokeColor: "#e0e0e0",
+                        generateGradient: true,
+                        percentColors: [[0.0, "#a9d70b" ], [0.50, "#f9c802"], [1.0, "#ff0000"]],
+                        // customize pointer
+                        pointer: {
+                        length: 0.8,
+                        strokeWidth: 0.035,
+                        iconScale: 1.0
                         },
-                        circumference: Math.PI
-                    }
-                });
+                        // static labels
+                        staticLabels: {
+                        font: "10px sans-serif",
+                        labels: [200, 500, 2100, 2800],
+                        fractionDigits: 0
+                        },
+                        // static zones
+                        staticZones: [
+                        {strokeStyle: "#F03E3E", min: 0, max: 200},
+                        {strokeStyle: "#FFDD00", min: 200, max: 500},
+                        {strokeStyle: "#30B32D", min: 500, max: 2100},
+                        {strokeStyle: "#FFDD00", min: 2100, max: 2800},
+                        {strokeStyle: "#F03E3E", min: 2800, max: 3000}
+                        ],
+                        // render ticks
+                        renderTicks: {
+                        divisions: 5,
+                        divWidth: 1.1,
+                        divLength: 0.7,
+                        divColor: '#333333',
+                        subDivisions: 3,
+                        subLength: 0.5,
+                        subWidth: 0.6,
+                        subColor: '#666666'
+                        },
+                        // the span of the gauge arc
+                        angle: 0.15,
 
-                ctxchart.translate(3 * chartcanvas.width / 8, 3 * chartcanvas.height/ 8);
-                ctxchart.rotate(3 * Math.PI / 2);
-                ctxchart.translate(-3 * chartcanvas.width / 8, -3 * chartcanvas.height / 8);
-                // var image = new Image();
-                // image.src = 'gaugemeter.png';
-                // image.onerror = function(){alert(image.src + 'failed')};
-                // image.onload = draw;
-                // var rotation = 1;
-                };
-                
-                // drawGauge(600, 300, 100, 475, 'gauge', 'gaugemeter')
+                        // line thickness
+                        lineWidth: 0.44,
+
+                        // radius scale
+                        radiusScale: 1.0,
+
+                        // font size
+                        fontSize: 40,
+
+                        // if false, max value increases automatically if value > maxValue
+                        limitMax: false,
+
+                        // if true, the min value of the gauge will be fixed
+                        limitMin: false,
+
+                        // High resolution support
+                        highDpiSupport: true
+                        
+                        };
+                        var target = document.getElementById('demo'); 
+                        var gauge = new Gauge(target).setOptions(opts);
+                        document.getElementById("preview-textfield").className = "preview-textfield";
+                        gauge.setTextField(document.getElementById("preview-textfield"));
+                        gauge.maxValue = 3000;
+                        gauge.setMinValue(0); 
+                        gauge.set(1250);
+                        gauge.animationSpeed = 32;
+
+                        var target = document.getElementById('demo2'); 
+                        var gauge = new Gauge(target).setOptions(opts);
+                        document.getElementById("preview-textfield2").className = "preview-textfield2";
+                        gauge.setTextField(document.getElementById("preview-textfield2"));
+                        gauge.maxValue = 3000;
+                        gauge.setMinValue(0); 
+                        gauge.set(1250);
+                        gauge.animationSpeed = 32;
 
                 var ctx = document.getElementById('bar1').getContext('2d');
                 var myChart = new Chart(ctx, {

@@ -283,8 +283,18 @@ header{
     margin-left: 80px;
 }
 
-.graf-barras-1{
+/* .graf-barras-1{
     width: 30%;
+} */
+
+#demo {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#demo2 {
+    width: 100%;
+    margin-top: 10px;
 }
 
 /* SEGUNDAS 2 GRÁFICAS */
