@@ -264,23 +264,13 @@ header{
     margin-top: -5px;
 }
 
-.sec1_grafica .porcientos{
+/* .sec1_grafica .porcientos{
     margin-left: 20px;
-}
-
-.sec1_grafica .flecha{
-    margin-left: 40px;
-}
-
-.sec1_grafica .flecha p{
-    margin-top: -0.1px;
-    text-align: center;
-    color: var(--orange);
-}
+} */
 
 .graf-barras{
     width: 30%;
-    margin-left: 80px;
+    margin-left: 40px;
 }
 
 /* .graf-barras-1{
@@ -288,12 +278,12 @@ header{
 } */
 
 #demo {
-    width: 100%;
+    width: 80%;
     margin-top: 10px;
 }
 
 #demo2 {
-    width: 100%;
+    width: 80%;
     margin-top: 10px;
 }
 
@@ -322,6 +312,7 @@ header{
 
 /* TERCERAS 2 GRÁFICAS */
 .horizontal_graficas--3{
+    /* margin-top: 10px; */
     display: flex;
     padding: 10px;
     align-items: center;
@@ -357,11 +348,42 @@ header{
     background-color: var(--black);
 }
 
+  #table-wrapper {
+    position:relative;
+  }
+  #table-scroll {
+    height:110px;
+    overflow:auto;  
+  }
+  #table-wrapper table {
+    width:100%;
+  }
+  
+  /* #table-wrapper table thead th .text {
+    position: absolute;   
+    margin-left: -25px;
+    top: -10px;
+  } */
+
+  #table-scroll::-webkit-scrollbar{
+    width: 10px;
+  }
+  
+  #table-scroll::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: black
+  }
+  
+  #table-scroll::-webkit-scrollbar-track{
+    border-radius: 5px;
+    background-color: gray
+  }
+
 /* SECCIÓN VERTICAL */
 .vertical{
     width: 35%;
     /* margin-left: -10px; */
-    margin-top: -570px;
+    margin-top: -550px;
     height: 602px;
     float: right;
     /* background-color: yellow; */
